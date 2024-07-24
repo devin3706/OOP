@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<queries>
+
+	<query id="create_info_table">
+		
+		<![CDATA[
+			CREATE TABLE information(
+				infoID varchar(10) NOT NULL,
+				locationID vachar(10) NOT NULL,
+				heading varchar(500),
+				description varchar(2000),
+				PRIMARY KEY (infoID)
+			);
+		]]>
+	
+	</query>
+	
+	<query id="insert_info">
+		
+		<![CDATA[
+			INSERT INTO information(infoID, locationID, heading, description)
+			VALUES (?, ?, ?, ?);
+		]]>
+	
+	</query>
+
+	<query id="get_info_ids">
+		
+		<![CDATA[
+			SELECT infoID FROM information;
+		]]>
+	
+	</query>
+	
+	<query id="get_info">
+		
+		<![CDATA[
+			SELECT * FROM information
+			ORDER BY locationID;
+		]]>
+	
+	</query>
+	
+	<query id="get_info_by_id">
+		
+		<![CDATA[
+			SELECT * FROM information WHERE infoID = ?;
+		]]>
+	
+	</query>
+	
+	<query id="update_info">
+		
+		<![CDATA[
+			UPDATE information
+			SET locationID = ?, heading = ?, description = ?
+			WHERE infoID = ?;
+		]]>
+	
+	</query>
+	
+	<query id="delete_info">
+		
+		<![CDATA[
+			DELETE FROM information WHERE infoID = ?;
+		]]>
+	
+	</query>
+
+</queries>

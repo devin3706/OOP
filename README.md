@@ -3,6 +3,6 @@ Y2S1 Group Project
 
 Collaborators:
 Devin Silva
-Pramuditha
+Pramuditha Bandara
 Osura Samoda
-Kavindi
+Umasha Kavindi
